@@ -35,7 +35,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method')) // allows us to delete(DELETE), update(PUT)
 
 
+//==============
+// SEED File
+//==============
 
+app.get('/seed', (req, res) => {
+  Product.create()
+})
 
 //========================
 // ROUTES
@@ -50,6 +56,10 @@ app.get('/products', (req, res) => {
 
 app.get('/products/sell', (req, res) => {
   res.render('sell.ejs')
+})
+
+app.post('/products', (req, res) => {
+  res.send(req.body)
 })
 
 //====================
