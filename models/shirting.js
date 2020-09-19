@@ -1,6 +1,6 @@
 module.exports = [
   {
-    product: "Corridor NYC",
+    brand: "Corridor NYC",
     name: 'Service Jacket in Washed Chambray',
     img: "https://cdn.shopify.com/s/files/1/0262/3951/products/corridor-washed-chambray-service-jacket-1.jpg?v=1583805810",
     price: 148
@@ -12,7 +12,7 @@ module.exports = [
     price: 198
   },
   {
-    brand: '3Sixteen',
+  
     brand: '3Sixteen',
     name: 'Fatigue Overshirt in Olive Gauze',
     img: "https://cdn.shopify.com/s/files/1/0262/3951/products/3sixteen-gauze-overshirt-olive-1.jpg?v=1582250502",

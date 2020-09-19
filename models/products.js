@@ -1,14 +1,14 @@
 const mongoose = require('mongoose')
 
-const productSchema = new mongoose.Schema (
+const productsSchema = new mongoose.Schema (
   {
-    product: String,
+    brand: String,
     name: String,
     img: String,
     price: Number,
   }
 )
 
-const Product = mongoose.model('Product', productSchema)
+const Product = mongoose.model('Product', productsSchema)
 
 module.exports = Product

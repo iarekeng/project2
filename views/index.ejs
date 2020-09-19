@@ -10,9 +10,12 @@
     <div class="grid-container">
       <% for (let i = 0; i < products.length; i++) { %>
         <div class="box box<%=[i]%>">
+          <a href="/products/<%=products[i].id%>">
         <img src="<%=products[i].img%>" width="300px">
-        <%=products[i].brand%>
+        <div><%=products[i].brand%></div>
         <div><%=products[i].name%></div>
+        </a>
+        <div>$<%=products[i].price%></div>
         </div>
       <%}%>
     </div>

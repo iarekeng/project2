@@ -74,6 +74,11 @@ app.post('/products', (req, res) => {
   res.send(req.body)
 })
 
+// SHOW ROUTE //
+app.get('/products/:id', (req, res) => {
+  res.send('show')
+})
+
 //====================
 // LISTENER
 // ===================
