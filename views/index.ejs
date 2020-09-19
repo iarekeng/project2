@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <link rel="stylesheet" href="/css/app.css">
+  </head>
+  <body>
+    <h1>General Assemb.ly Store</h1>
+    <div class="grid-container">
+      <% for (let i = 0; i < products.length; i++) { %>
+        <div class="box box<%=[i]%>">
+        <img src="<%=products[i].img%>" width="300px">
+        <%=products[i].brand%>
+        <div><%=products[i].name%></div>
+        </div>
+      <%}%>
+    </div>
+  </body>
+</html>

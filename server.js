@@ -6,6 +6,8 @@ const express = require('express')
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
 const app = express()
+const Product = require('./models/products.js')
+const shirting = require('./models/shirting.js')
 const db = mongoose.connection
 require('dotenv').config()
 
@@ -31,7 +33,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 app.use(express.static('public'))
 // get data from forms as objects - access to key value pairs in req.body, you'll get empty objects if you dont add it
 app.use(express.urlencoded({ extended: false }));
-
+app.use( express.static('public'))
 app.use(methodOverride('_method')) // allows us to delete(DELETE), update(PUT)
 
 
@@ -39,8 +41,10 @@ app.use(methodOverride('_method')) // allows us to delete(DELETE), update(PUT)
 // SEED File
 //==============
 
-app.get('/seed', (req, res) => {
-  Product.create()
+app.get('/products/seed', (req, res) => {
+  Product.create(shirting, (err, data) => {
+    res.redirect('/products')
+  })
 })
 
 //========================
@@ -50,14 +54,22 @@ app.get('/', (req, res) => {
   res.redirect('/products')
 })
 
+// INDEX ROUTE //
 app.get('/products', (req, res) => {
-  res.send('hello world')
+  Product.find({}, (err, allProducts) => {
+    res.render('index.ejs',
+    {
+      products:allProducts
+    }
+    )
+  })
 })
-
+// SELL ROUTE //
 app.get('/products/sell', (req, res) => {
   res.render('sell.ejs')
 })
 
+// CREATE ROUTE //
 app.post('/products', (req, res) => {
   res.send(req.body)
 })
