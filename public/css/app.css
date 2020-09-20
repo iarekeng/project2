@@ -17,6 +17,10 @@
   color: black;
 }
 
+#right > li {
+  display: inline;
+
+}
 
 .grid-container {
   display: grid;

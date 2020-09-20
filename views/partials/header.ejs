@@ -15,10 +15,24 @@
       <a class="nav-link" href="/products/sell">Sell Items</a>
     </li>
   </ul>
+  <ul id="right">
+    <% if (currentUser) { %>
+    <li>Welcome <%= currentUser.username %></li>
+    <li>
+      <form action="/sessions?_method=DELETE" method="POST">
+        <input type="submit" value="Log Out" class="btn btn-outline-success" />
+      </form>
+    </li>
+    <% } else { %>
+    <li><a href="/users/new">Sign Up</a></li>
+    <li><a href="/sessions/new">Log In</a></li>
+    <% } %>
+  </ul>
   <form class="form-inline my-2 my-lg-0">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
   </form>
 </div>
+
 </nav>
 </header>

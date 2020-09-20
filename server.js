@@ -3,6 +3,7 @@
 //===============
 
 const express = require("express");
+const session = require('express-session')
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 const app = express();
@@ -40,6 +41,12 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
 app.use(methodOverride("_method")); // allows us to delete(DELETE), update(PUT)
+app.use(session({
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: false
+  })
+)
 
 //==============
 // SEED File
@@ -50,6 +57,14 @@ app.get("/products/seed", (req, res) => {
     res.redirect("/products");
   });
 });
+
+//===============
+// CONTROLLERS
+//===============
+const userController = require('./controllers/users_controller.js')
+app.use('/users', userController)
+const sessionsController = require('./controllers/sessions_controller.js')
+app.use('/sessions', sessionsController)
 
 //========================
 // ROUTES
@@ -76,6 +91,7 @@ app.get("/products", (req, res) => {
   Product.find({}, (err, allProducts) => {
     res.render("index.ejs", {
       products: allProducts,
+      currentUser: req.session.currentUser
     });
   });
 });
@@ -84,6 +100,7 @@ app.get("/products/sell", (req, res) => {
   Create.find({}, (err, foundProduct) => {
     res.render("sell.ejs", {
       products: foundProduct,
+      currentUser: req.session.currentUser
     });
   });
 });
@@ -114,11 +131,13 @@ app.get("/products/:id/edit", (req, res) => {
       Create.findById(req.params.id, (err, editedProduct2) => {
         res.render("edit.ejs", {
           products: editedProduct2,
+          currentUser: req.session.currentUser
         });
       });
     } else {
       res.render("edit.ejs", {
         products: editedProduct,
+        currentUser: req.session.currentUser
       });
     }
   });
@@ -131,6 +150,7 @@ app.get("/products/:id", (req, res) => {
       Create.findById(req.params.id, (err, foundProduct2) => {
         res.render("show.ejs", {
           products: foundProduct2,
+          currentUser: req.session.currentUser,
           i: req.params.id,
         });
       });
@@ -138,6 +158,7 @@ app.get("/products/:id", (req, res) => {
       res.render("show.ejs", {
         products: foundProduct,
         i: req.params.id,
+        currentUser: req.session.currentUser
       });
     }
   });
