@@ -19,7 +19,11 @@
 
 #right > li {
   display: inline;
+}
 
+#login {
+  margin-right: 5px;
+  margin-left: 2px;
 }
 
 .grid-container {
