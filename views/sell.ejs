@@ -7,11 +7,33 @@
   </head>
   <body>
     <h1>Sell Items</h1>
-    <form action="/products" method="POST">
+    <form action="/products/sell" method="POST">
       Brand: <input type="text" name="brand" /><br/>
       Image: <input type="text" name="img" placeholder="image" /><br/>
       Product: <input type="text" name="name" /><br/>
       Price: <input type="number" name="price" /><br/>
+      <div>
+        Description:<input type="text" name="description.detail1"><br>
+      Description:<input type="text" name="description.detail2"><br>
+        Description:<input type="text" name="description.detail3"><br>
+        Description:<input type="text" name="description.detail4"><br>
+        Description:<input type="text" name="description.detail5"><br>
+      </div>
       <input type="submit" value="Create New Item" />
+    </form>
+    <div>
+      <div class="grid-container">
+        <% for (let i = 0; i < products.length; i++) { %>
+          <div class="box box<%=[i]%>">
+            <a  href="/products/<%=products[i].id%>" id="linkIndex">
+          <img src="<%=products[i].img%>" width="300px">
+          <div id="brandIndex"><%=products[i].brand%></div>
+          <div id="nameIndex"><%=products[i].name%></div>
+          </a>
+          <div id="priceIndex">$<%=products[i].price%></div>
+          </div>
+        <%}%>
+      </div>
+    </div>
   </body>
 </html>

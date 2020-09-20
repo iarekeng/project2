@@ -2,6 +2,19 @@
   /* border: gold 1px solid; */
 }
 
+
+/* SHOW ROUTE */
+
+#showImg {
+  float: right;
+}
+
+/* INDEX ROUTE */
+#brandIndex, #nameIndex, #linkIndex {
+  text-decoration: none;
+  color: black;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;

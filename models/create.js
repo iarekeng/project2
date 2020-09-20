@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const productsSchema = new mongoose.Schema (
+const createSchema = new mongoose.Schema (
   {
     brand: String,
     name: String,
@@ -16,6 +16,6 @@ const productsSchema = new mongoose.Schema (
   }
 )
 
-const Product = mongoose.model('Product', productsSchema)
+const Create = mongoose.model('Create', createSchema)
 
-module.exports = Product
+module.exports = Create
