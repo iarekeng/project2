@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <%- include('./partials/head.ejs') %>
   </head>
   <body>
-    <h1>Edit Products</h1>
+    <%- include('./partials/header.ejs') %>
     <form action='/products/<%=products.id%>?_method=PUT' method="POST">
     <input type="text" name="brand" value="<%=products.brand%>"><br>
     <input type="text" name="img" value="<%=products.img%>"><br>
@@ -20,5 +19,6 @@
       </div>
     <input type="submit" value="Edit Product">
     </form>
+    <%- include('./partials/script.ejs') %>
   </body>
 </html>

@@ -1,5 +1,7 @@
 * {
   /* border: gold 1px solid; */
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -15,10 +17,52 @@
   color: black;
 }
 
+
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;
   grid-auto-rows: 100px;
   text-align: center;
+  padding: 2em 1em;
+}
+
+#headerFirst {
+  background: #878F7C;
+  padding: .02px;
+}
+
+#headerTitle {
+  padding: 12px;
+}
+
+#shipping {
+  color: white;
+  text-align: center;
+  margin-top: 8px
+}
+
+#facebook {
+  margin: 0px 4px;
+}
+
+#phone {
+  margin-top: 5px;
+}
+
+/* FOOTER */
+.footer-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  background-color: #747B6B;
+  padding: 2.5em;
+}
+
+.footertitle {
+  padding: 10px;
+}
+
+#infolink {
+  color: black;
 }

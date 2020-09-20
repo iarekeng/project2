@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
-      <link rel="stylesheet" href="/css/app.css">
+    <!-- ======== HEAD ============ -->
+    <%- include('./partials/head.ejs') %>
   </head>
   <body>
-    <h1>General Assemb.ly Store</h1>
+    <!-- ========= HEADER ========== -->
+    <%- include('./partials/header.ejs') %>
+    <main>
+      <!-- ========= CAROUSEL ============ -->
+      <%- include('./partials/carousel.ejs') %>
     <div class="grid-container">
       <% for (let i = 0; i < products.length; i++) { %>
         <div class="box box<%=[i]%>">
@@ -19,5 +22,10 @@
         </div>
       <%}%>
     </div>
+  </main>
+    <!-- ========== FOOTER =========== -->
+    <%- include('./partials/footer.ejs') %>
+    <!-- =========== SCRIPT TAG ========== -->
+    <%- include('./partials/script.ejs') %>
   </body>
 </html>

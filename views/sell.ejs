@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="/css/app.css">
+    <%- include('./partials/head.ejs') %>
   </head>
   <body>
-    <h1>Sell Items</h1>
+    <%- include('./partials/header.ejs') %>
     <form action="/products/sell" method="POST">
       Brand: <input type="text" name="brand" /><br/>
       Image: <input type="text" name="img" placeholder="image" /><br/>
@@ -35,5 +33,6 @@
         <%}%>
       </div>
     </div>
+      <%- include('./partials/script.ejs') %>
   </body>
 </html>

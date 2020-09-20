@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <%- include('./partials/head.ejs') %>
   </head>
   <body>
+    <%- include('./partials/header.ejs') %>
     <div>
       <h3 id="showBrand"><%=products.brand%></h3>
       <nav>
@@ -25,5 +25,6 @@
         <input type="submit" value="DELETE">
       </form>
     </div>
+    <%- include('./partials/script.ejs') %>
   </body>
 </html>

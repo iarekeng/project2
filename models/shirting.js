@@ -67,7 +67,7 @@ module.exports = [
   },
   {
     brand: 'Filson',
-    name: "Vintage Flannel Work Shirt Black/Green/ Navy Plaid",
+    name: "Flannel Work Shirt Black/Green/ Navy Plaid",
     img: "https://cdn.shopify.com/s/files/1/0262/3951/products/filson-vintage-flannel-workshirt-navy-green-1.jpg?v=1574820293",
     price: 145,
     description: {
