@@ -55,6 +55,10 @@ app.get("/products/seed", (req, res) => {
 // ROUTES
 //========================
 
+app.get("/", (req, res) => {
+  res.redirect("/products")
+})
+
 // DELETE ROUTE //
 app.delete("/products/:id", (req, res) => {
   Product.findByIdAndRemove(req.params.id, (error, data) => {
