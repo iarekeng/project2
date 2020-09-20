@@ -3,7 +3,7 @@
 //===============
 
 const express = require("express");
-const session = require('express-session')
+const session = require("express-session");
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 const app = express();
@@ -41,12 +41,13 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
 app.use(methodOverride("_method")); // allows us to delete(DELETE), update(PUT)
-app.use(session({
-  secret: process.env.SECRET,
-  resave: false,
-  saveUninitialized: false
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false,
   })
-)
+);
 
 //==============
 // SEED File
@@ -61,18 +62,18 @@ app.get("/products/seed", (req, res) => {
 //===============
 // CONTROLLERS
 //===============
-const userController = require('./controllers/users_controller.js')
-app.use('/users', userController)
-const sessionsController = require('./controllers/sessions_controller.js')
-app.use('/sessions', sessionsController)
+const userController = require("./controllers/users_controller.js");
+app.use("/users", userController);
+const sessionsController = require("./controllers/sessions_controller.js");
+app.use("/sessions", sessionsController);
 
 //========================
 // ROUTES
 //========================
 
 app.get("/", (req, res) => {
-  res.redirect("/products")
-})
+  res.redirect("/products");
+});
 
 // DELETE ROUTE //
 app.delete("/products/:id", (req, res) => {
@@ -80,18 +81,18 @@ app.delete("/products/:id", (req, res) => {
     if (data === null) {
       Create.findByIdAndRemove(req.params.id, (error, data2) => {
         res.redirect("/products/sell");
-      })
+      });
     } else {
       res.redirect("/products");
-}
-})
-})
+    }
+  });
+});
 // INDEX ROUTE //
 app.get("/products", (req, res) => {
   Product.find({}, (err, allProducts) => {
     res.render("index.ejs", {
       products: allProducts,
-      currentUser: req.session.currentUser
+      currentUser: req.session.currentUser,
     });
   });
 });
@@ -100,7 +101,7 @@ app.get("/products/sell", (req, res) => {
   Create.find({}, (err, foundProduct) => {
     res.render("sell.ejs", {
       products: foundProduct,
-      currentUser: req.session.currentUser
+      currentUser: req.session.currentUser,
     });
   });
 });
@@ -114,16 +115,26 @@ app.post("/products/sell", (req, res) => {
 
 // PUT ROUTE //
 app.put("/products/:id", (req, res) => {
-  Product.findByIdAndUpdate(req.params.id, req.body,{ new: true }, (err, updateProduct) => {
+  Product.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (err, updateProduct) => {
       if (updateProduct === null) {
-        Create.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updateProduct2) => {
-      res.redirect("/products/sell");
-    })
-} else {
-  res.redirect('/products')
-};
-})
-})
+        Create.findByIdAndUpdate(
+          req.params.id,
+          req.body,
+          { new: true },
+          (err, updateProduct2) => {
+            res.redirect("/products/sell");
+          }
+        );
+      } else {
+        res.redirect("/products");
+      }
+    }
+  );
+});
 // EDIT ROUTE //
 app.get("/products/:id/edit", (req, res) => {
   Product.findById(req.params.id, (err, editedProduct) => {
@@ -131,13 +142,13 @@ app.get("/products/:id/edit", (req, res) => {
       Create.findById(req.params.id, (err, editedProduct2) => {
         res.render("edit.ejs", {
           products: editedProduct2,
-          currentUser: req.session.currentUser
+          currentUser: req.session.currentUser,
         });
       });
     } else {
       res.render("edit.ejs", {
         products: editedProduct,
-        currentUser: req.session.currentUser
+        currentUser: req.session.currentUser,
       });
     }
   });
@@ -158,7 +169,7 @@ app.get("/products/:id", (req, res) => {
       res.render("show.ejs", {
         products: foundProduct,
         i: req.params.id,
-        currentUser: req.session.currentUser
+        currentUser: req.session.currentUser,
       });
     }
   });

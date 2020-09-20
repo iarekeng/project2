@@ -2,6 +2,7 @@
   /* border: gold 1px solid; */
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 
@@ -17,13 +18,8 @@
   color: black;
 }
 
-#right > li {
-  display: inline;
-}
-
-#login {
-  margin-right: 5px;
-  margin-left: 2px;
+.nav-item{
+  margin: 5px;
 }
 
 .grid-container {
@@ -65,10 +61,6 @@
   grid-template-rows: auto auto auto;
   background-color: #747B6B;
   padding: 2.5em;
-}
-
-.footertitle {
-  padding: 10px;
 }
 
 #infolink {
