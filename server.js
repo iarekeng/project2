@@ -50,9 +50,8 @@ app.use(
 //===============
 // CONTROLLERS
 //===============
-const createController = require('./controllers/create_controller.js')
-app.use('/products', createController)
-const shirtsController = require('./controllers/shirting_controller.js')
+
+const shirtsController = require('./controllers/products_controller.js')
 app.use('/products', shirtsController)
 const userController = require("./controllers/users_controller.js");
 app.use("/users", userController);
