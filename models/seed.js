@@ -256,4 +256,61 @@ module.exports = [
                   detail5: 'Made in Los Angeles, CA'
                  }
   },
+  {
+    brand: 'Red Wing Heritage',
+    name: '875 6" Classic Moc in Oro Legacy',
+    category: 'footwear',
+    index: 'product',
+    img: "https://cdn.shopify.com/s/files/1/0262/3951/products/red-wing-heritage-875-moc-1.jpg?v=1572743796",
+    price: 280,
+    description: {
+                  detail1: 'Oro Legacy Leather',
+                  detail2: 'Leather Lace',
+                  detail3: "Traction Tred Outsole",
+                  detail4: 'D Width',
+                  detail5: 'Made in USA'
+                 }
+  },
+  {
+    brand: 'Red Wing Heritage',
+    name: '8856 6" Classic Moc in Oxblood Mesa',
+    category: 'footwear',
+    img: "https://cdn.shopify.com/s/files/1/0262/3951/products/red-wing-heritage-8856-moc-2.jpg?v=1572743793",
+    price: 280,
+    description: {
+                  detail1: 'Oxblood Mesa Leather',
+                  detail2: 'Leather Lace',
+                  detail3: "Traction Tred Outsole",
+                  detail4: 'D Width',
+                  detail5: 'Made in USA'
+                 }
+  },
+  {
+    brand: 'Red Wing Heritage',
+    name: '8849 6" Classic Moc in Black Prairie',
+    category: 'footwear',
+    img: "https://cdn.shopify.com/s/files/1/0262/3951/products/red-wing-heritage-8849-moc-2.jpg?v=1572743789",
+    price: 280,
+    description: {
+                  detail1: 'Black Prairie Leather',
+                  detail2: 'Leather Lace',
+                  detail3: "Traction Tred Outsole",
+                  detail4: 'D Width',
+                  detail5: 'Made in USA'
+                 }
+  },
+  {
+    brand: 'Helm Boots',
+    name: 'Phillips 2.0',
+    category: 'footwear',
+    img: "https://cdn.shopify.com/s/files/1/1552/7975/products/Helm_Phillips_1_5363a1c1-766e-4f56-b31d-5294037d067b.jpg?v=1476940755",
+    price: 280,
+    description: {
+                  detail1: 'Mid-height Chukka Boot',
+                  detail2: 'Leather Lace',
+                  detail3: "Traction Tred Outsole",
+                  detail4: 'D Width',
+                  detail5: 'Made in USA'
+                 }
+  },
 ]
