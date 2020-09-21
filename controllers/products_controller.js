@@ -1,7 +1,7 @@
 const express = require('express')
 const Product = require("../models/products.js");
-const shirting = require('../models/shirting.js')
 const Create = require("../models/create.js")
+const seed = require("../models/seed.js")
 const products = express.Router()
 
 //==============
@@ -9,7 +9,7 @@ const products = express.Router()
 //==============
 
 products.get("/seed", (req, res) => {
-  Product.create(shirting, (err, data) => {
+  Product.create(seed, (err, data) => {
     res.redirect("/products");
   });
 });
@@ -26,15 +26,49 @@ products.delete("/:id", (req, res) => {
     }
   });
 });
+
 // INDEX ROUTE //
 products.get("/", (req, res) => {
-  Product.find({}, (err, allProducts) => {
+  Product.find({index:"product"}, (err, allProducts) => {
     res.render("index.ejs", {
       products: allProducts,
       currentUser: req.session.currentUser,
     });
   });
 });
+
+// SHIRTING ROUTE //
+products.get("/shirting", (req, res) => {
+  Product.find({category:'shirting'}, (err, allShirting) => {
+    console.log(allShirting);
+    res.render("shirting.ejs", {
+      shirting: allShirting,
+      currentUser: req.session.currentUser
+    })
+  })
+})
+
+// BOTTOMS ROUTE //
+products.get("/bottoms", (req, res) => {
+  Product.find({category:'bottoms'}, (err, allBottoms) => {
+    res.render('bottoms.ejs', {
+      bottoms:allBottoms,
+      currentUser: req.session.currentUser
+    })
+  })
+})
+
+// BAG ROUTE //
+products.get("/bags", (req, res) => {
+  Product.find({category:'bags'}, (err, allBags) => {
+    console.log(allBags);
+    res.render("bags.ejs", {
+      bags:allBags,
+      currentUser: req.session.currentUser
+    })
+  })
+})
+
 // SELL ROUTE //
 products.get("/sell", (req, res) => {
   Create.find({}, (err, foundProduct) => {
@@ -74,6 +108,7 @@ products.put("/:id", (req, res) => {
     }
   );
 });
+
 // EDIT ROUTE //
 products.get("/:id/edit", (req, res) => {
   Product.findById(req.params.id, (err, editedProduct) => {

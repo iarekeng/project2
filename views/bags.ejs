@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- ======== HEAD ============ -->
+    <%- include('./partials/head.ejs') %>
+  </head>
+  <body>
+    <!-- ========= HEADER ========== -->
+    <%- include('./partials/header.ejs') %>
+    <main>
+      <!-- ========= CAROUSEL ============ -->
+      <%- include('./partials/carousel.ejs') %>
+    <div class="grid-container">
+      <% for (let i = 0; i < bags.length; i++) { %>
+        <div class="box box<%=[i]%>">
+          <a  href="/products/<%=bags[i].id%>" id="linkIndex">
+        <img src="<%=bags[i].img%>" width="300px">
+        <div id="brandIndex"><%=bags[i].brand%></div>
+        <div id="nameIndex"><%=bags[i].name%></div>
+        </a>
+        <div id="priceIndex">$<%=bags[i].price%></div>
+        </div>
+      <%}%>
+    </div>
+  </main>
+    <!-- ========== FOOTER =========== -->
+    <%- include('./partials/footer.ejs') %>
+    <!-- =========== SCRIPT TAG ========== -->
+    <%- include('./partials/script.ejs') %>
+  </body>
+</html>
