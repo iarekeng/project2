@@ -304,12 +304,40 @@ module.exports = [
     name: 'Phillips 2.0',
     category: 'footwear',
     img: "https://cdn.shopify.com/s/files/1/1552/7975/products/Helm_Phillips_1_5363a1c1-766e-4f56-b31d-5294037d067b.jpg?v=1476940755",
-    price: 280,
+    price: 265,
     description: {
                   detail1: 'Mid-height Chukka Boot',
-                  detail2: 'Leather Lace',
-                  detail3: "Traction Tred Outsole",
-                  detail4: 'D Width',
+                  detail2: 'Chromexcel Upper',
+                  detail3: "water-locked sole",
+                  detail4: 'fully lined in calfskin',
+                  detail5: 'Made in Main'
+                 }
+  },
+  {
+    brand: 'Wolverine',
+    name: '1000 Mile Boot - Tan',
+    category: 'footwear',
+    img: "https://cdn.shopify.com/s/files/1/1552/7975/products/WeatheredCoalition_Ecom-3_a8763241-7f6e-466c-875a-afbf2e68c54f.jpg?v=1476939849",
+    price: 270,
+    description: {
+                  detail1: 'Horween Chromexcel Leather',
+                  detail2: 'Flat waxed cotton laces',
+                  detail3: "Introduced in 1914",
+                  detail4: 'Vibram Sole',
+                  detail5: 'Made in USA'
+                 }
+  },
+  {
+    brand: 'Wolverine',
+    name: '1000 Mile Boot - Black',
+    category: 'footwear',
+    img: "https://cdn.shopify.com/s/files/1/1552/7975/products/WeatheredCoalition_Ecom-23_d91563b8-8ee4-4e35-9a04-58ab6a11d4bb.jpg?v=1476939842",
+    price: 270,
+    description: {
+                  detail1: 'Horween Chromexcel Leather',
+                  detail2: 'Flat waxed cotton laces',
+                  detail3: "Introduced in 1914",
+                  detail4: 'Vibram Sole',
                   detail5: 'Made in USA'
                  }
   },
