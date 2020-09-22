@@ -40,7 +40,6 @@ products.get("/", (req, res) => {
 // SHIRTING ROUTE //
 products.get("/shirting", (req, res) => {
   Product.find({category:'shirting'}, (err, allShirting) => {
-    console.log(allShirting);
     res.render("shirting.ejs", {
       shirting: allShirting,
       currentUser: req.session.currentUser
@@ -71,7 +70,6 @@ products.get("/bottoms", (req, res) => {
 // BAG ROUTE //
 products.get("/bags", (req, res) => {
   Product.find({category:'bags'}, (err, allBags) => {
-    console.log(allBags);
     res.render("bags.ejs", {
       bags:allBags,
       currentUser: req.session.currentUser

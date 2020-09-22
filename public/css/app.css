@@ -13,12 +13,21 @@
   margin-top: 1em;
 }
 
+#deleteShow {
+  margin-bottom: 10px;
+}
+
+.liShow {
+  margin: 3px;
+}
+
 #showImg {
   float: left;
   width: 50%;
   padding-right: 2em;
-  padding-bottom: 10em;
+  padding-bottom: 420px;
 }
+
 
 .showContainer {
   margin-top: 3em;
@@ -30,7 +39,7 @@
   color: black;
 }
 
-#featureIndex {
+.featureIndex {
   margin-top: 1em;
   text-align: center;
 }
@@ -47,6 +56,58 @@
   text-align: center;
   padding: 2em 2em;
 }
+
+.insta-container > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.insta-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2.2fr 1fr 1fr;
+  grid-template-rows: 2fr 2fr;
+  grid-gap: 10px;
+  grid-template-areas:
+  "grid1 grid2 grid3 grid4 grid5"
+  "grid6 grid7 grid3 grid8 grid9";
+  margin: 1em;
+  padding-top: 2em;
+  margin-bottom: 2em;
+
+}
+
+.grid1 {
+  grid-area: grid1;
+}
+
+.grid2 {
+  grid-area: grid2;
+}
+.grid3 {
+  grid-area: grid3;
+
+
+}
+.grid4 {
+  grid-area: grid4;
+}
+.grid5 {
+  grid-area: grid5;
+}
+.grid6 {
+  grid-area: grid6;
+}
+.grid7 {
+  grid-area: grid7;
+}
+.grid8 {
+  grid-area: grid8;
+}
+.grid9 {
+  grid-area: grid9;
+}
+
+
 
 #headerFirst {
   background: #878F7C;

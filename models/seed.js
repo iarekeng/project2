@@ -33,6 +33,7 @@ module.exports = [
     brand: '3Sixteen',
     name: 'Fatigue Overshirt in Olive Gauze',
     category: 'shirting',
+    index: 'product',
     img: "https://cdn.shopify.com/s/files/1/0262/3951/products/3sixteen-gauze-overshirt-olive-1.jpg?v=1582250502",
     price: 165,
     description: {
@@ -332,6 +333,7 @@ module.exports = [
     brand: 'Wolverine',
     name: '1000 Mile Boot - Black',
     category: 'footwear',
+    index: 'product',
     img: "https://cdn.shopify.com/s/files/1/1552/7975/products/WeatheredCoalition_Ecom-23_d91563b8-8ee4-4e35-9a04-58ab6a11d4bb.jpg?v=1476939842",
     price: 270,
     description: {

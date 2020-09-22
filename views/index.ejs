@@ -10,7 +10,7 @@
     <main>
       <!-- ========= CAROUSEL ============ -->
       <%- include('./partials/carousel.ejs') %>
-      <h2 id="featureIndex">Featured Items</h2>
+      <h2 class="featureIndex">Featured Items</h2>
     <div class="grid-container">
       <% for (let i = 0; i < products.length; i++) { %>
         <div class="box box<%=[i]%>">
@@ -22,6 +22,18 @@
         <div id="priceIndex">$<%=products[i].price%></div>
         </div>
       <%}%>
+    </div>
+    <h2 class="featureIndex">Instagram</h2>
+    <div class="insta-container">
+      <img src="http://streetetiquette.com/wp-content/uploads/2015/08/SE-1.png" class="grid1">
+      <img src="https://www.thetrendspotter.net/wp-content/uploads/2016/10/Selvedge.jpg" class="grid2">
+      <img src="http://streetetiquette.com/wp-content/uploads/2012/04/20120412img_2977.jpg" class="grid3">
+      <img src="https://daily.jstor.org/wp-content/uploads/2017/11/coffee_shop_portland_or_1050x700.jpg" class="grid4">
+      <img src="https://46fjj12eeht73lsxezcqpvlt-wpengine.netdna-ssl.com/wp-content/uploads/2020/09/fade-friday-a-p-c-petit-standard-5-years-6-washes-0-soaks-front-back.jpg" class="grid5">
+      <img src="https://cdn.shopify.com/s/files/1/1139/8160/files/Moniker_General-2432_1024x1024.jpg?v=1554833000" class="grid6">
+      <img src="http://streetetiquette.com/wp-content/uploads/2013/03/sepalboots16.jpg" class="grid7">
+      <img src="http://streetetiquette.com/wp-content/uploads/2013/03/sepalboots27-1024x682.jpg" class="grid8">
+      <img src="http://streetetiquette.com/wp-content/uploads/2012/02/20120208img_5360.jpg" class="grid9">
     </div>
   </main>
     <!-- ========== FOOTER =========== -->

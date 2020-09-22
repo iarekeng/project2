@@ -12,10 +12,9 @@
       <h1 id="showName"><%=products.name%></h1>
       <h2 id="showPrice">$<%=products.price%></h2>
       </div>
-      <div id="bottomContainer">
       <div class="form-group">
         <label for="Size">Size</label><br>
-        <select class="form-control col-lg-2" id="size">
+        <select class="form-control col-2" id="size">
           <% if (products.category === "shirting"){ %>
           <option>S</option>
           <option>M</option>
@@ -37,24 +36,27 @@
           <option>33</option>
           <option>34</option>
           <option>36</option>
-      <% } %>
+      <% } else if (products.category === "bags") { %>
+          <option>O/S</option>
+      <%}%>
         </select>
         </div>
-
       <button type="button" class="btn btn-danger btn-lg">Add to Cart</button>
       <ul id="descriptionShow">
-        <li><%=products.description.detail1%></li>
-        <li><%=products.description.detail2%></li>
-        <li><%=products.description.detail3%></li>
-        <li><%=products.description.detail4%></li>
-        <li><%=products.description.detail5%></li>
+        <li class="liShow"><%=products.description.detail1%></li>
+        <li class="liShow"><%=products.description.detail2%></li>
+        <li class="liShow"><%=products.description.detail3%></li>
+        <li class="liShow"><%=products.description.detail4%></li>
+        <li class="liShow"><%=products.description.detail5%></li>
       </ul>
       <form action="/products/<%=products.id%>?_method=DELETE" method="POST">
-        <input type="submit" value="DELETE">
+        <input id="deleteShow" class="btn btn-outline-dark" type="submit" value="DELETE">
       </form>
-      <a href="/products/<%=products.id%>/edit">Edit Product</a>
+      <a class="btn btn-dark" id="editShow" href="/products/<%=products.id%>/edit">Edit Product</a>
     </div>
   </div>
-    <%- include('./partials/script.ejs') %>
+
+  <!-- ========= SCRIPT =========== -->
+  <%- include('./partials/script.ejs') %>
   </body>
 </html>
