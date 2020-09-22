@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
 }
 
 
@@ -29,8 +30,13 @@
   color: black;
 }
 
+#featureIndex {
+  margin-top: 1em;
+  text-align: center;
+}
+
 .nav-item{
-  margin: 5px;
+  margin: 2px;
 }
 
 .grid-container {
