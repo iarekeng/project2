@@ -57,6 +57,8 @@
   padding: 2em 2em;
 }
 
+/* INSTAGRAM GRID */
+
 .insta-container > img {
   width: 100%;
   object-fit: contain;
@@ -64,16 +66,15 @@
 
 .insta-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 2.2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 2.18fr 1fr 1fr;
   grid-template-rows: 2fr 2fr;
-  grid-gap: 10px;
+  grid-gap: 8px;
   grid-template-areas:
   "grid1 grid2 grid3 grid4 grid5"
   "grid6 grid7 grid3 grid8 grid9";
   margin: 1em;
   padding-top: 2em;
-  margin-bottom: 2em;
-
+  margin-bottom: 1.3em;
 }
 
 .grid1 {
