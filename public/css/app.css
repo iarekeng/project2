@@ -8,10 +8,21 @@
 
 /* SHOW ROUTE */
 
-#showImg {
-  float: right;
+#descriptionShow {
+  margin-top: 1em;
 }
 
+#showImg {
+  float: left;
+  width: 50%;
+  padding-right: 2em;
+  padding-bottom: 10em;
+}
+
+.showContainer {
+  margin-top: 3em;
+  text-align: center;
+}
 /* INDEX ROUTE */
 #brandIndex, #nameIndex, #linkIndex {
   text-decoration: none;
@@ -28,7 +39,7 @@
   grid-template-rows: auto auto auto;
   grid-auto-rows: 100px;
   text-align: center;
-  padding: 2em 1em;
+  padding: 2em 2em;
 }
 
 #headerFirst {

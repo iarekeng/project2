@@ -6,15 +6,26 @@
   <body>
     <%- include('./partials/header.ejs') %>
     <div>
-      <h3 id="showBrand"><%=products.brand%></h3>
-      <nav>
-      <a href="/products">Back to Index</a>
-      <a href="/products/<%=products.id%>/edit">Edit Product</a>
-      </nav>
+      <div class="showContainer">
       <img src="<%=products.img%>" id="showImg">
+      <h5 id="showBrand"><%=products.brand%></h5>
       <h1 id="showName"><%=products.name%></h1>
-      <p id="showPrice">$<%=products.price%></p>
-      <ul>Description
+      <h2 id="showPrice">$<%=products.price%></h2>
+      </div>
+      <div id="bottomContainer">
+      <div class="form-group">
+        <label for="Size">Size</label><br>
+        <select class="form-control col-lg-2" id="size">
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+          <option>XXL</option>
+        </select>
+        </div>
+
+      <button type="button" class="btn btn-danger btn-lg">Add to Cart</button>
+      <ul id="descriptionShow">
         <li><%=products.description.detail1%></li>
         <li><%=products.description.detail2%></li>
         <li><%=products.description.detail3%></li>
@@ -24,7 +35,9 @@
       <form action="/products/<%=products.id%>?_method=DELETE" method="POST">
         <input type="submit" value="DELETE">
       </form>
+      <a href="/products/<%=products.id%>/edit">Edit Product</a>
     </div>
+  </div>
     <%- include('./partials/script.ejs') %>
   </body>
 </html>

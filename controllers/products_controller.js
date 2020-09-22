@@ -48,7 +48,7 @@ products.get("/shirting", (req, res) => {
   })
 })
 
-// BOOTS ROUTE
+// FOOTWEAR ROUTE
 products.get("/footwear", (req, res) => {
   Product.find({category: "footwear"}, (err, allFootwear) => {
     res.render("footwear.ejs", {

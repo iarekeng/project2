@@ -89,7 +89,7 @@ module.exports = [
     brand: 'Bradley Mountain',
     name: "The Biographer - Black",
     category: 'bags',
-    index: "product",
+
     img: "https://cdn.shopify.com/s/files/1/1552/7975/products/IMG_2421_465ddaba-ef5f-47ff-b71e-65871686b95e.jpg?v=1476941095",
     price: 298,
     description: {
@@ -101,17 +101,18 @@ module.exports = [
                  }
   },
   {
-    brand: 'Bradley Mountain',
-    name: "The Biographer - Field Tan",
+    brand: 'Filson',
+    name: "Original Briefcase Otter Green",
+    index: "product",
     category: 'bags',
-    img: "https://cdn.shopify.com/s/files/1/1552/7975/products/WeatheredCoalition_Ecom-319_bc4e14ae-31a4-4c54-b491-18bc5f80cfb1.jpg?v=1476941104",
-    price: 298,
+    img: "https://cdn.shopify.com/s/files/1/0575/6381/products/11070256ottergreen-main_2000x.jpg?v=1571438733",
+    price: 325,
     description: {
-                  detail1: 'Waxed Canvas',
-                  detail2: 'Roll top style rucksack',
-                  detail3: "13 liters of interior room",
-                  detail4: 'Side pen holder and front zipper pocket',
-                  detail5: 'Made in San Diego, California.'
+                  detail1: 'Water Repellent',
+                  detail2: 'Two way brass zipper w/ leather pulls',
+                  detail3: '16" W x 12 1/2" x 4" D',
+                  detail4: '2 full-length interior open pockets',
+                  detail5: 'Made in USA'
                  }
   },
   {
