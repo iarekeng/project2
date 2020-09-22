@@ -16,12 +16,28 @@
       <div class="form-group">
         <label for="Size">Size</label><br>
         <select class="form-control col-lg-2" id="size">
-          <% if ()
+          <% if (products.category === "shirting"){ %>
           <option>S</option>
           <option>M</option>
           <option>L</option>
           <option>XL</option>
           <option>XXL</option>
+        <%} else if (products.category === "footwear"){%>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+        <%} else if (products.category === "bottoms") {%>
+          <option>28</option>
+          <option>29</option>
+          <option>30</option>
+          <option>31</option>
+          <option>32</option>
+          <option>33</option>
+          <option>34</option>
+          <option>36</option>
+      <% } %>
         </select>
         </div>
 
