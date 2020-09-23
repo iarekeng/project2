@@ -49,10 +49,12 @@
         <li class="liShow"><%=products.description.detail4%></li>
         <li class="liShow"><%=products.description.detail5%></li>
       </ul>
+      <% if(currentUser) {%>
       <form action="/products/<%=products.id%>?_method=DELETE" method="POST">
         <input id="deleteShow" class="btn btn-outline-dark" type="submit" value="DELETE">
       </form>
       <a class="btn btn-dark" id="editShow" href="/products/<%=products.id%>/edit">Edit Product</a>
+    <%}%>
     </div>
   </div>
 
