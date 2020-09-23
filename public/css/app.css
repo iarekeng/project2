@@ -141,11 +141,16 @@
   margin-top: 8px
 }
 
+#facebook, #instagram, #twitter {
+  font-size: 30px;
+}
+
 #facebook {
   margin: 0px 4px;
 }
 
 #phone {
+  
   margin-top: 5px;
 }
 
