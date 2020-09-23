@@ -8,6 +8,14 @@ const products = express.Router()
 // SEED File
 //==============
 
+const isAuthenticated = (req, res, next) => {
+  if (req.session.currentUser) {
+    return next();
+  } else {
+    res.redirect('/sessions/new')
+  }
+}
+
 products.get("/seed", (req, res) => {
   Product.create(seed, (err, data) => {
     res.redirect("/products");
@@ -15,7 +23,7 @@ products.get("/seed", (req, res) => {
 });
 
 // DELETE ROUTE //
-products.delete("/:id", (req, res) => {
+products.delete("/:id", isAuthenticated, (req, res) => {
   Product.findByIdAndRemove(req.params.id, (error, data) => {
     if (data === null) {
       Create.findByIdAndRemove(req.params.id, (error, data2) => {
@@ -118,7 +126,7 @@ products.put("/:id", (req, res) => {
 });
 
 // EDIT ROUTE //
-products.get("/:id/edit", (req, res) => {
+products.get("/:id/edit", isAuthenticated, (req, res) => {
   Product.findById(req.params.id, (err, editedProduct) => {
     if (editedProduct === null) {
       Create.findById(req.params.id, (err, editedProduct2) => {

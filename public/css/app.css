@@ -39,6 +39,11 @@
   color: black;
 }
 
+#brandIndex {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 .featureIndex {
   margin-top: 1em;
   text-align: center;
@@ -55,6 +60,17 @@
   grid-auto-rows: 100px;
   text-align: center;
   padding: 2em 2em;
+}
+
+/* SELL INDEX */
+.sellIndex {
+  display: flex;
+}
+
+#sellIndexImg {
+  /* position: relative; */
+  border-radius: 5px;
+  align-content: center;
 }
 
 /* INSTAGRAM GRID */
@@ -131,6 +147,19 @@
 
 #phone {
   margin-top: 5px;
+}
+
+
+/* EDIT ROUTE */
+
+#editImg {
+  float: left;
+}
+
+/* SELL ROUTE */
+
+.containerSell {
+  padding-left: 1em;
 }
 
 /* FOOTER */

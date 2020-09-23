@@ -6,20 +6,47 @@
   <body>
     <%- include('./partials/header.ejs') %>
     <form action="/products/sell" method="POST">
-      Brand: <input type="text" name="brand" /><br/>
-      Image: <input type="text" name="img" placeholder="image" /><br/>
-      Product: <input type="text" name="name" /><br/>
-      Price: <input type="number" name="price" /><br/>
-      <div>
-        Description:<input type="text" name="description.detail1"><br>
-      Description:<input type="text" name="description.detail2"><br>
-        Description:<input type="text" name="description.detail3"><br>
-        Description:<input type="text" name="description.detail4"><br>
-        Description:<input type="text" name="description.detail5"><br>
+      <div class="containerSell">
+      <div class="form group">
+        <label for="brand">Brand:</label><br>
+        <input type="text" name="brand" />
       </div>
-      <input type="submit" value="Create New Item" />
+      <div class="form group">
+        <label for="brand">Image:</label><br>
+        <input type="text" name="img" placeholder="image" />
+      </div>
+      <div class="form group">
+        <label for="brand">Name:</label><br>
+        <input type="text" name="name" />
+      </div>
+      <div class="form group">
+        <label for="brand">Price:</label><br>
+        <input type="number" name="price" />
+      </div>
+      <div class="form group">
+        <label for="brand">Description:</label><br>
+        <input type="text" name="description.detail1">
+      </div>
+      <div class="form group">
+        <label for="brand">Description:</label><br>
+        <input type="text" name="description.detail2">
+      </div>
+      <div class="form group">
+        <label for="brand">Description:</label><br>
+        <input type="text" name="description.detail3">
+      </div>
+      <div class="form group">
+        <label for="brand">Description:</label><br>
+        <input type="text" name="description.detail4">
+      </div>
+      <div class="form group">
+        <label for="brand">Description:</label><br>
+        <input type="text" name="description.detail5">
+      </div>
+        <input type="submit" value="Create New Item" />
     </form>
     <div>
+    </div>
       <div class="grid-container">
         <% for (let i = 0; i < products.length; i++) { %>
           <div class="box box<%=[i]%>">
