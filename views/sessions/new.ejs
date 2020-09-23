@@ -4,7 +4,38 @@
     <%- include ('../partials/head.ejs') %>
   </head>
   <body>
-    <div class="container">
+    <header>
+      <div id="headerFirst"><p id="shipping">free shipping on all domestic orders over $100</p></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/products">General Assemb.ly</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/products">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/products/shirting">Tops</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/products/bottoms">Bottoms</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/products/bags">Bags</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/products/footwear">Footwear</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/products/sell"></a>
+      </li>
+    </ul>
+  </div>
+  </header>
+  <div class="container">
+    <div class="jumbotron">
       <h1>Log In</h1>
       <form action="/sessions" method="POST">
         <label for="name">User Name:</label>
@@ -12,8 +43,9 @@
         <label for="color">Password:</label>
         <input type="password" name="password" />
         <br>
-        <input type="submit" value="Submit">
+        <input class="btn btn-success" type="submit" value="Submit">
       <form>
     </div>
+  </div>
   </body>
 </html>

@@ -4,10 +4,8 @@ const Create = require("../models/create.js")
 const seed = require("../models/seed.js")
 const products = express.Router()
 
-//==============
-// SEED File
-//==============
 
+// Authenticated //
 const isAuthenticated = (req, res, next) => {
   if (req.session.currentUser) {
     return next();
@@ -16,6 +14,7 @@ const isAuthenticated = (req, res, next) => {
   }
 }
 
+// SEED ROUTE //
 products.get("/seed", (req, res) => {
   Product.create(seed, (err, data) => {
     res.redirect("/products");

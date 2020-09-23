@@ -7,6 +7,7 @@
     <%- include('./partials/header.ejs') %>
     <img id=editImg src="<%=products.img%>">
     <form action='/products/<%=products.id%>?_method=PUT' method="POST">
+
       <div class="form group">
         <label for="brand">Brand:</label><br>
         <input type="text" name="brand" value="<%=products.brand%>">
@@ -27,24 +28,8 @@
         <label for="description1">Add Description:</label><br>
         <input type="text" name="description.detail1" value="<%=products.description.detail1%>">
       </div>
-      <div class="form group">
-        <label for="description2">Add Description:</label><br>
-        <input type="text" name="description.detail2" value="<%=products.description.detail2%>">
-      </div>
-      <div class="form group">
-        <label for="description3">Add Description:</label><br>
-        <input type="text" name="description.detail3" value="<%=products.description.detail3%>">
-      </div>
-      <div class="form group">
-        <label for="description4">Add Description:</label><br>
-        <input type="text" name="description.detail4" value="<%=products.description.detail4%>">
-      </div>
-      <div class="form group">
-        <label for="description5">Add Description:</label><br>
-        <input type="text" name="description.detail5" value="<%=products.description.detail5%>">
-      </div>
       <br>
-    <input type="submit" value="Edit Product">
+    <input class="btn btn-secondary" type="submit" value="Edit Product">
     </form>
     <!-- script  -->
     <%- include('./partials/script.ejs') %>

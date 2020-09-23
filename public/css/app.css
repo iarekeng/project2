@@ -9,6 +9,10 @@
 
 /* SHOW ROUTE */
 
+.container {
+  margin-top: 2em;
+}
+
 #descriptionShow {
   margin-top: 1em;
 }
@@ -25,9 +29,22 @@
   float: left;
   width: 50%;
   padding-right: 2em;
-  padding-bottom: 420px;
+  padding-bottom: 440px;
 }
 
+#sellCreate {
+  margin: 5px 0px;
+}
+
+.sell-grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-auto-rows: 100px;
+  text-align: center;
+  padding: 2em 2em;
+  margin-top: 2em;
+}
 
 .showContainer {
   margin-top: 3em;
@@ -51,6 +68,10 @@
 
 .nav-item{
   margin: 2px;
+}
+
+#login {
+  margin-left: 5px;
 }
 
 .grid-container {
@@ -150,7 +171,7 @@
 }
 
 #phone {
-  
+
   margin-top: 5px;
 }
 
@@ -159,12 +180,23 @@
 
 #editImg {
   float: left;
+  margin-right: 2em;
+  margin-top: 2em;
+}
+
+#sellCreate {
+  margin-left: 2em;
+}
+
+.form {
+  margin-left: 2em;
+  margin-top: 5px;
 }
 
 /* SELL ROUTE */
 
 .containerSell {
-  padding-left: 1em;
+  margin-top: 2em;
 }
 
 /* FOOTER */
